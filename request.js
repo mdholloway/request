@@ -741,6 +741,7 @@ Request.prototype.start = function () {
   delete reqOptions.auth
 
   debug('make request', self.uri.href)
+  debug('with cookie', reqOptions.headers.cookie)
 
   // node v6.8.0 now supports a `timeout` value in `http.request()`, but we
   // should delete it for now since we handle timeouts manually for better
